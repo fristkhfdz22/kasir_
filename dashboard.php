@@ -5,9 +5,19 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 include('config.php'); 
-$search = '';
+if (!isset($_SESSION['click_count'])) {
+    $_SESSION['click_count'] = 0;
+}
 if (isset($_POST['search'])) {
+    $_SESSION['click_count']++;
     $search = $_POST['search'];
+} else {
+    $search = '';
+}
+
+if ($_SESSION['click_count'] >= 2) {
+    header("Refresh:0"); 
+    $_SESSION['click_count'] = 0; 
 }
 $query_barang = "SELECT * FROM barang WHERE kode_barang LIKE '%$search%' OR nama_barang LIKE '%$search%'";
 $result_barang = $conn->query($query_barang);
@@ -26,12 +36,12 @@ $conn->close();
 <?php  include('includes/sidebar.php') ?>
 <div id="content">
     <div class="mb-4">
-        <form method="POST" class="d-flex justify-content-between align-items-center">
-            <div class="input-group w-50">
+    <form method="POST" class="d-flex justify-content-between align-items-center">
+    <div class="input-group w-50">
         <input type="text" class="form-control w-50" name="search" value="<?php echo htmlspecialchars($search); ?>" placeholder="Cari Kode Barang atau Nama Barang">
         <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i> Cari</button>
-        </div>
-        </form>
+    </div>
+</form>
     </div>
     <div class="card shadow-sm mb-4">
     <div class="card-header">
@@ -144,4 +154,5 @@ $conn->close();
         </div>
     </div>
 </div>
+
 <?php  include('includes/footer.php') ?>
