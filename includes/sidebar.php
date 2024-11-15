@@ -1,7 +1,9 @@
 <div id="sidebar">
         <h2 class="p-3 text-center text-white border-bottom">Menu</h2>
         <ul class="nav flex-column p-3">
-            <li class="nav-item"><a href="dashboard.php" class="nav-link"><i class="fas fa-cash-register"></i><span>Kasir</span></a></li>
+            <li class="nav-item"><a href="total.php" class="nav-link"><i class="fas fa-calculator"></i><span>Total</span></a></li>
+<hr>
+<li class="nav-item"><a href="dashboard.php" class="nav-link"><i class="fas fa-cash-register"></i><span>Kasir</span></a></li>
 <hr>
             <li class="nav-item">
     <a class="nav-link" href="#" id="barangToggle">

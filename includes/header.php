@@ -11,7 +11,8 @@
         #sidebar {
             width: 250px;
             height: 100vh;
-            background-color: #0dcaf0; 
+            background-color: #007bff
+; 
             transition: width 0.3s ease, left 0.3s ease;
             position: fixed;
             z-index: 100;
@@ -75,7 +76,8 @@
             left: 0;
             width: 100%;
             height: 60px;
-            background-color: #0dcaf0;
+            background-color: #007bff
+            ;
             color: #ffffff;
             display: flex;
             align-items: center;
