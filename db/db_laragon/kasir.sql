@@ -35,7 +35,7 @@ CREATE TABLE `barang` (
   `harga` decimal(10,2) NOT NULL,
   `stok` int NOT NULL,
   `tanggal_dibuat` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-)  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `barang`
@@ -59,7 +59,7 @@ CREATE TABLE `pengguna` (
   `nama_lengkap` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
   `role` enum('admin','user') NOT NULL DEFAULT 'user'
-)  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `pengguna`
@@ -83,7 +83,7 @@ CREATE TABLE `transaksi` (
   `jumlah_beli` int NOT NULL,
   `total_bayar` decimal(10,2) NOT NULL,
   `tanggal` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-)  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Indexes for dumped tables
